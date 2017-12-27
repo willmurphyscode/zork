@@ -316,7 +316,7 @@ impl Clone for Struct13 {
 
 #[no_mangle]
 pub unsafe extern fn savegm_() {
-    let mut i : i32;
+    let mut i : i32 = 0;
     let mut e : *mut _IO_FILE;
     prsvec_.prswon = 0i32;
     if !({
@@ -685,9 +685,9 @@ impl Clone for Struct14 {
 
 #[no_mangle]
 pub unsafe extern fn rstrgm_() {
-    let mut i : i32;
-    let mut j : i32;
-    let mut k : i32;
+    let mut i : i32 = 0;
+    let mut j : i32 = 0;
+    let mut k : i32 = 0;
     let mut e : *mut _IO_FILE;
     prsvec_.prswon = 0i32;
     if {
