@@ -595,8 +595,8 @@ pub unsafe extern fn nobjs_(mut ri : i32, mut arg : i32) -> i32 {
     let mut i__2 : i32;
     let mut ret_val : i32;
     let mut f : i32;
-    let mut target : i32;
-    let mut i : i32;
+    let mut target : i32 = 0;
+    let mut i : i32 = 0;
     let mut j : i32;
     let mut av : i32;
     let mut wl : i32;
