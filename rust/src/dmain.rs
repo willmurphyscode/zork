@@ -1584,7 +1584,7 @@ fn main() {
 }
 
 #[no_mangle]
-pub unsafe extern fn _c_main(mut argc : i32, mut argv : *mut *mut u8) {
+pub unsafe extern fn _c_main(mut argc : i32, mut argv : *mut *mut u8) -> i32 {
     if init_() != 0 {
         game_();
     }
