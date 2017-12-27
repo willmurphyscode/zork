@@ -407,8 +407,8 @@ pub unsafe extern fn score_(mut flg : i32) {
     static mut erank : [i32; 5] = [ 20i32, 15i32, 10i32, 5i32, 0i32 ];
     let mut i__1 : i32;
     let mut i : i32;
-    let mut as : i32;
-    as = advs_.ascore[(play_.winner - 1i32) as (usize)];
+    let mut i_2 : i32;
+    i_2 = advs_.ascore[(play_.winner - 1i32) as (usize)];
     if findex_.endgmf != 0 {
         more_output(0i32 as (*mut ::std::os::raw::c_void) as (*const u8));
         printf((*b"Your score in the endgame \0").as_ptr());
@@ -447,7 +447,7 @@ pub unsafe extern fn score_(mut flg : i32) {
         }
         printf(
             (*b" %d [total of %d points], in %d move\0").as_ptr(),
-            as,
+            i_2,
             state_.mxscor,
             state_.moves
         );
@@ -460,7 +460,7 @@ pub unsafe extern fn score_(mut flg : i32) {
             if !(i <= 10i32) {
                 break;
             }
-            if as * 20i32 / state_.mxscor >= rank[(i - 1i32) as (usize)] {
+            if i_2 * 20i32 / state_.mxscor >= rank[(i - 1i32) as (usize)] {
                 break;
             }
             i = i + 1;
