@@ -26,9 +26,9 @@ impl Clone for Struct1 {
 
 #[no_mangle]
 pub unsafe extern fn gttime_(mut t : *mut i32) {
-    let mut h : i32;
-    let mut m : i32;
-    let mut s : i32;
+    let mut h : i32 = 0;
+    let mut m : i32 = 0;
+    let mut s : i32 = 0;
     itime_(
         &mut h as (*mut i32),
         &mut m as (*mut i32),
